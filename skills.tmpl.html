@@ -1,0 +1,108 @@
+<div class="holder">
+	<div  class="page-title skills" ng-if="PageTitle">
+		<h1 ng-bind="PageTitle"></h1>
+	</div>
+	<div class="select-skills" > 
+		<div  class="page-title" >
+			<div class="hold-description">
+				<h2>{{"grow_network" | translate}}</h2>
+				<h3>{{"select_modify_skills" | translate}}</h3>
+			</div>
+		</div>
+		<form  action="#" class="form" ng-submit="mySkills.setSkills($event)">
+			<fieldset>
+				<div class="holder">
+					<button type="submit" ng-class="{active: mySkills.activeButton()}" ng-disabled="!mySkills.activeButton()" class="btn-next btn-green" >{{"btn_next" | translate}}</button>
+					<h3>{{"select_skills" | translate}}</h3>
+					<strong class="selected">{{"have_selected" | translate}}
+						<span class="skill" ng-repeat="skill in mySkills.SkillsData.selectedSkills"> {{::skill}}</span>
+					</strong>
+				</div>
+				<div class="holder">
+					<div class="block">
+						<div class="hold-block" ng-repeat="(key, value) in mySkills.SkillsData.skills" ng-if="value.hidden == 0 && key == 32">
+							<strong class="title">{{::value.skillName}}</strong>
+							<ul class="list">
+								<li  ng-if="items.hidden == 0" ng-repeat="(keys, items) in value.subcategories">
+									<label ng-class="{checked: mySkills.isSkillChecked(items.id, items.parent) || items.checked}" data-id="{{::items.id}}" data-parent="{{::items.parent}}" ng-click="mySkills.selectSkill(items)" class="radio-holer" ng-bind="::items.skillName"></label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="block">
+						<div class="hold-block" ng-repeat="(key, value) in mySkills.SkillsData.skills" ng-if="value.hidden == 0 && key == 14">
+							<strong class="title">{{::value.skillName}}</strong>
+							<ul class="list">
+								<li  ng-if="items.hidden == 0" ng-repeat="(keys, items) in value.subcategories">
+									<label ng-class="{checked: mySkills.isSkillChecked(items.id, items.parent) || items.checked}" data-id="{{::items.id}}" data-parent="{{::items.parent}}" ng-click="mySkills.selectSkill(items)" class="radio-holer" ng-bind="::items.skillName"></label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="block">
+						<div class="hold-block" ng-repeat="(key, value) in mySkills.SkillsData.skills" ng-if="value.hidden == 0 && key == 1">
+							<strong class="title">{{::value.skillName}}</strong>
+							<ul class="list">
+								<li  ng-if="items.hidden == 0" ng-repeat="(keys, items) in value.subcategories">
+									<label ng-class="{checked: mySkills.isSkillChecked(items.id, items.parent) || items.checked}" data-id="{{::items.id}}" data-parent="{{::items.parent}}" ng-click="mySkills.selectSkill(items)" class="radio-holer" ng-bind="::items.skillName"></label>
+								</li>
+							</ul>
+						</div>
+						<div class="hold-block" ng-repeat="(key, value) in mySkills.SkillsData.skills" ng-if="value.hidden == 0 && key == 21">
+							<strong class="title">{{::value.skillName}}</strong>
+							<ul class="list">
+								<li  ng-if="items.hidden == 0" ng-repeat="(keys, items) in value.subcategories">
+									<label ng-class="{checked: mySkills.isSkillChecked(items.id, items.parent) || items.checked}" data-id="{{::items.id}}" data-parent="{{::items.parent}}" ng-click="mySkills.selectSkill(items)" class="radio-holer" ng-bind="::items.skillName"></label>
+								</li>
+							</ul>
+						</div>
+
+						<div class="hold-block" ng-repeat="(key, value) in mySkills.SkillsData.skills" ng-if="value.hidden == 0 && key == 43">
+							<strong class="title">{{::value.skillName}}</strong>
+							<ul class="list">
+								<li  ng-if="items.hidden == 0" ng-repeat="(keys, items) in value.subcategories">
+									<label ng-class="{checked: mySkills.isSkillChecked(items.id, items.parent) || items.checked}" data-id="{{::items.id}}" data-parent="{{::items.parent}}" ng-click="mySkills.selectSkill(items)" class="radio-holer" ng-bind="::items.skillName"></label>
+								</li>
+							</ul>
+						</div>
+						<div class="hold-block" ng-repeat="(key, value) in mySkills.SkillsData.skills" ng-if="value.hidden == 0 && key == 77">
+							<strong class="title">{{::value.skillName}}</strong>
+							<ul class="list">
+								<li  ng-if="items.hidden == 0" ng-repeat="(keys, items) in value.subcategories">
+									<label ng-class="{checked: mySkills.isSkillChecked(items.id, items.parent) || items.checked }" data-id="{{::items.id}}" data-parent="{{::items.parent}}" ng-click="mySkills.selectSkill(items)" class="radio-holer" ng-bind="::items.skillName"></label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="block">
+						<div class="hold-block" ng-repeat="(key, value) in mySkills.SkillsData.skills" ng-if="value.hidden == 0 && key == 41">
+							<strong class="title">{{::value.skillName}}</strong>
+							<ul class="list">
+								<li  ng-if="items.hidden == 0" ng-repeat="(keys, items) in value.subcategories">
+									<label ng-class="{checked: mySkills.isSkillChecked(items.id, items.parent) || items.checked }" data-id="{{::items.id}}" data-parent="{{::items.parent}}" ng-click="mySkills.selectSkill(items)" class="radio-holer" ng-bind="::items.skillName"></label>
+								</li>
+							</ul>
+						</div>
+						<div class="hold-block" ng-repeat="(key, value) in mySkills.SkillsData.skills" ng-if="value.hidden == 0 && key == 42">
+							<strong class="title">{{::value.skillName}}</strong>
+							<ul class="list">
+								<li  ng-if="items.hidden == 0" ng-repeat="(keys, items) in value.subcategories">
+									<label ng-class="{checked: mySkills.isSkillChecked(items.id, items.parent) || items.checked }" data-id="{{::items.id}}" data-parent="{{::items.parent}}" ng-click="mySkills.selectSkill(items)" class="radio-holer" ng-bind="::items.skillName"></label>
+								</li>
+							</ul>
+						</div>
+						<div class="hold-block" ng-repeat="(key, value) in mySkills.SkillsData.skills" ng-if="value.hidden == 0 && key == 7">
+							<strong class="title">{{::value.skillName}}</strong>
+							<ul class="list">
+								<li  ng-if="items.hidden == 0" ng-repeat="(keys, items) in value.subcategories">
+									<label ng-class="{checked: mySkills.isSkillChecked(items.id, items.parent) || items.checked }" data-id="{{::items.id}}" data-parent="{{::items.parent}}" ng-click="mySkills.selectSkill(items)" class="radio-holer" ng-bind="::items.skillName"></label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</form>		
+	</div>
+</div>
+
